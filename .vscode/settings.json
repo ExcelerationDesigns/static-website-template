@@ -1,3 +1,9 @@
 {
-  "vsicons.presets.angular": false
+  "vsicons.presets.angular": false,
+  "git.confirmSync": false,
+  "editor.renderWhitespace": "boundary",
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "editor.tabSize": 2
 }

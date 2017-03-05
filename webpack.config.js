@@ -9,11 +9,24 @@ module.exports = {
       filename: 'app.js'
     },
     module: {
-      loaders: [
-        { test: /\.css$/, loader: 'style-loader!css-loader'},
-
-      ]
-    },
+      rules: [
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }, {
+        test: /\.html$/,
+        loader: 'html-loader',
+        query: {
+          interpolate: true
+        }
+      }, {
+        test  : /\.ico|\.png|\.jpg$/,
+        loader: 'file-loader',
+        query : {
+          name: '[name].[ext]',
+        },
+      },
+    ]},
     plugins: [
       new HtmlWebpackPlugin({
         filename: 'index.html',
