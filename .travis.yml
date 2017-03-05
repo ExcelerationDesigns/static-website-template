@@ -22,13 +22,15 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 
 before_script:
+- npm run build
+
+install:
 - npm install
 
 script:
-- npm run build
+- bash deploy.sh
 
 after_success:
-- bash deploy.sh
 
 notifications:
   email:
