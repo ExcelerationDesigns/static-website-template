@@ -1,0 +1,29 @@
+{
+  "name": "static-website-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "css-loader": "^0.26.2",
+    "html-loader": "^0.4.5",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "scripts": {
+    "webpack": "webpack --progress --colors",
+    "webpackWatch": "webpack --progress --colors",
+    "live-reload": "webpack-dev-server --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExcelerationDesigns/static-website-template.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExcelerationDesigns/static-website-template/issues"
+  },
+  "homepage": "https://github.com/ExcelerationDesigns/static-website-template#readme"
+}
