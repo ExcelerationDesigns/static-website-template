@@ -3,10 +3,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
-    entry: './src/app.js',
+    entry: './src/scripts/app.js',
     output: {
       path: path.join(__dirname, './dist'),
-      filename: '[name].html'
+      filename: 'app.js'
     },
     module: {
       loaders: [
@@ -14,9 +14,17 @@ module.exports = {
 
       ]
     },
-    plugins: [new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/index.html',
-      inject: true
-    })]
+    plugins: [
+      new HtmlWebpackPlugin({
+        filename: 'index.html',
+        template: './src/templates/layout.html',
+        inject: true
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'about.html',
+        template: './src/templates/layout.html',
+        inject: true
+      }),
+
+    ]
 };
