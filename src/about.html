@@ -1,1 +1,9 @@
-<p>about</p>
+<!DOCTYPE html>
+<html>
+    ${require('html-loader!./templates/header.html')}
+    <body>
+      ${require('html-loader!./templates/nav-menu.html')}
+        <p>about</p>
+        ${require('html-loader!./templates/footer.html')}
+    </body>
+</html>
