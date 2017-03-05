@@ -28,9 +28,10 @@ install:
 - npm install
 
 script:
-- bash deploy.sh
+
 
 after_success:
+- bash deploy.sh
 
 notifications:
   email:
