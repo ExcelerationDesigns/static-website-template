@@ -1,12 +1,19 @@
+var path = require('path');
+
 module.exports = {
-    entry: "./entry.js",
+
+    entry: {
+        main: './index.html'
+    },
     output: {
-        path: __dirname,
-        filename: "bundle.js"
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].html'
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style-loader!css-loader" }
+            { test: /\.html$/,
+              use: [ 'html-loader' ]
+            }
         ]
     }
 };
