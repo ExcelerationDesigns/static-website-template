@@ -1,4 +1,4 @@
-module.exports = function copywriteDate(designYear){
+function copywriteDate(designYear){
 	var currentYear = new Date().getFullYear()
 	var displayYear
 

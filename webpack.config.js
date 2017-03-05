@@ -1,5 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
@@ -25,9 +26,16 @@ module.exports = {
         query : {
           name: '[name].[ext]',
         },
-      },
+      }, {
+        test  : /^src\/vendor\/.+?\.js$/,
+        loader: 'file-loader'
+      }
     ]},
     plugins: [
+      new CopyWebpackPlugin([{
+        from: 'src/vendor',
+        to: 'vendor'
+      }]),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/index.html',
