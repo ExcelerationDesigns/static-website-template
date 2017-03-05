@@ -14,6 +14,7 @@ then
   echo "This commit was made against the $TRAVIS_PULL_REQUEST_BRANCH and not the master! No deploy!"
   exit 0
 fi
+shopt -s extglob
 
 npm run
 
