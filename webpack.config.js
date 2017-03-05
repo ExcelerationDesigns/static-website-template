@@ -48,6 +48,7 @@ module.exports = {
         from: 'src/vendor',
         to: 'vendor'
       }]),
+      new ExtractTextPlugin('style.css'),
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: './src/index.html',
