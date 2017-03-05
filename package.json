@@ -17,9 +17,10 @@
     "webpack-dev-server": "^2.4.1"
   },
   "scripts": {
-    "webpack": "webpack --progress --colors",
+    "build": "webpack --progress --colors",
     "webpackWatch": "webpack --progress --colors",
-    "live-reload": "webpack-dev-server --progress --colors"
+    "live-reload": "webpack-dev-server --progress --colors",
+    "webpack": "webpack "
   },
   "repository": {
     "type": "git",
