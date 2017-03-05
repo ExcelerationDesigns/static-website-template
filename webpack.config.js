@@ -13,20 +13,31 @@ module.exports = {
       rules: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      }, {
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          //resolve-url-loader may be chained before sass-loader if necessary
+          use: ['css-loader']
+        })
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
+      },
+      {
         test: /\.html$/,
         loader: 'html-loader',
         query: {
           interpolate: true
         }
-      }, {
-        test  : /\.ico|\.png|\.jpg$/,
+      },
+      {
+        test  : /\.ico|\.png|\.gif|\.jpg$/,
         loader: 'file-loader',
         query : {
-          name: '[name].[ext]',
+          name: 'img/[name].[ext]',
         },
-      }, {
+      },
+      {
         test  : /^src\/vendor\/.+?\.js$/,
         loader: 'file-loader'
       }
